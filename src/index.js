@@ -2,8 +2,7 @@ module.exports = function longestConsecutiveLength(array) {
   if(array.length === 0) return 0;
 
   array.sort((prev, curr) => {
-    if(curr >= prev) return -1;
-    return 1;
+    return (curr >= prev) ? -1 : 1;
   });
 
   let max = 1;
